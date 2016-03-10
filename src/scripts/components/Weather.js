@@ -37,6 +37,7 @@ var Weather = React.createClass({
                 dataType: 'jsonp',
                 success: function (data) {
                     if (this.isMounted()) {
+                      console.log(data);
                         var state = this.state;
                         state.weather = {
                             summary: data.currently.summary,
