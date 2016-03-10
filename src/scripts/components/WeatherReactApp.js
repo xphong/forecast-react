@@ -2,11 +2,11 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Weather = require('./components/Weather');
+var Weather = require('./Weather');
 
 // CSS
-require('../styles/normalize.css');
-require('../styles/main.css');
+require('../../styles/normalize.css');
+require('../../styles/main.css');
 
 var WeatherReactApp = React.createClass({
   render: function() {

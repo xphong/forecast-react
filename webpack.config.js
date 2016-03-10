@@ -19,7 +19,7 @@ module.exports = {
   devtool: false,
   entry: [
       'webpack/hot/only-dev-server',
-      './src/scripts/WeatherReactApp.js'
+      './src/scripts/app.js'
   ],
 
   stats: {
