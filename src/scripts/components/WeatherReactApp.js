@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
+var WeatherHeader = require('./WeatherHeader');
 var Weather = require('./Weather');
 
 // CSS
@@ -13,6 +13,7 @@ var WeatherReactApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
+        <WeatherHeader />
         <Weather />
       </div>
     );

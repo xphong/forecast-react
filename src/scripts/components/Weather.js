@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var AppStore = require('../stores/WeatherStore');
 
@@ -42,19 +41,16 @@ var Weather = React.createClass({
     },
     render: function () {
         return (
-            <div className="weather">
-                <h1 className="weather__header">Weather</h1>
-                <div className="weather__container">
-                    <span className="weather__info--title">Forecast:</span>
-                    <span className="weather__info--data">{this.state.weather.summary}</span>
-                    <span className="weather__info--title">Temperature:</span>
-                    <span className="weather__info--data">{this.state.weather.temperature}°C</span>
-                    <span className="weather__info--title">Humidity:</span>
-                    <span className="weather__info--data">{this.state.weather.humidity}%</span>
-                    <span className="weather__info--title">Pressure:</span>
-                    <span className="weather__info--data">{this.state.weather.pressure}%</span>
-                </div>
-            </div>
+          <div className="weather__container">
+              <span className="weather__info--title">Forecast:</span>
+              <span className="weather__info--data">{this.state.weather.summary}</span>
+              <span className="weather__info--title">Temperature:</span>
+              <span className="weather__info--data">{this.state.weather.temperature}°C</span>
+              <span className="weather__info--title">Humidity:</span>
+              <span className="weather__info--data">{this.state.weather.humidity}%</span>
+              <span className="weather__info--title">Pressure:</span>
+              <span className="weather__info--data">{this.state.weather.pressure}%</span>
+          </div>
         );
     }
 });
