@@ -11,8 +11,19 @@ function convertToCelsius(temperature) {
 var Weather = React.createClass({
     getInitialState: function() {
         return {
-            weather: {}
+            weather: AppStore.getWeatherForecast()
         };
+    },
+    componentWillMount:function(){
+      AppStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount:function(){
+      AppStore.removeChangeListener(this._onChange);
+    },
+    _onChange: function(){
+      this.setState({
+        weather: AppStore.getWeatherForecast()
+      });
     },
     componentDidMount: function() {
         navigator.geolocation.getCurrentPosition(function(position){

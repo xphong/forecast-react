@@ -1,3 +1,5 @@
+'use strict';
+
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 var AppActions = {
@@ -5,7 +7,7 @@ var AppActions = {
     AppDispatcher.handleViewAction({
       actionType: 'SEARCH_WEATHER',
       city: city
-    })
+    });
   }
 };
 

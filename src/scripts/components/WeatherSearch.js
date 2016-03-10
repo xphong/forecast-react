@@ -19,8 +19,8 @@ var WeatherSearch = React.createClass({
   },
   render: function () {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="City" onChange={this.handleChange} required>
+      <form className="weather__search" onSubmit={this.handleSubmit}>
+        <input type="text" placeholder="City" onChange={this.handleChange} required />
         <button type="submit">Search</button>
       </form>
     );

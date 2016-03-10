@@ -2,6 +2,7 @@
 
 var React = require('react');
 var WeatherHeader = require('./WeatherHeader');
+var WeatherSearch = require('./WeatherSearch');
 var Weather = require('./Weather');
 
 // CSS
@@ -14,6 +15,7 @@ var WeatherReactApp = React.createClass({
     return (
       <div className='main'>
         <WeatherHeader />
+        <WeatherSearch />
         <Weather />
       </div>
     );
