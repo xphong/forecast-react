@@ -4,8 +4,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
 
-require('../../styles/weather.scss');
-
 function convertToCelsius(temperature) {
     return Math.round((temperature - 32) * 5/9);
 }

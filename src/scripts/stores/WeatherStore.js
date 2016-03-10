@@ -13,19 +13,15 @@ var AppStore = assign(EventEmitter.prototype, {
   emitChange: function() {
     this.emit(CHANGE_EVENT)
   },
-
   addChangeListener: function(callback) {
     this.on(CHANGE_EVENT, callback)
   },
-
   removeChangeListener: function(callback) {
     this.removeListener(CHANGE_EVENT, callback)
   },
-
   getWeatherForecast: function() {
     return _WeatherForecast;
   },
-
   dispatcherIndex: AppDispatcher.register(function(payload) {
     var action = payload.action;
 
@@ -39,7 +35,6 @@ var AppStore = assign(EventEmitter.prototype, {
 
     return true;
   })
-
-})
+});
 
 module.exports = AppStore;
