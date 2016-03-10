@@ -1,10 +1,10 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 var AppActions = {
-  searchWeather: function(item) {
+  searchWeather: function(city) {
     AppDispatcher.handleViewAction({
       actionType: 'SEARCH_WEATHER',
-      item: item
+      city: city
     })
   }
 };

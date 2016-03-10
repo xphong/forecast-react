@@ -28,10 +28,10 @@ var AppStore = assign(EventEmitter.prototype, {
 
   dispatcherIndex: AppDispatcher.register(function(payload) {
     var action = payload.action;
-    
+
     switch(action.actionType) {
       case 'SEARCH_WEATHER':
-        _searchWeather(payload.action.item);
+        _searchWeather(payload.action.city);
         break;
     }
 
