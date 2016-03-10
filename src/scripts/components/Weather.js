@@ -5,6 +5,10 @@ var $ = require('jquery');
 
 require('../../styles/weather.scss');
 
+function convertToCelsius(temperature) {
+    return Math.round((temperature - 32) * 5/9);
+}
+
 var Weather = React.createClass({
     getInitialState: function() {
         return {
@@ -34,11 +38,6 @@ var Weather = React.createClass({
                     }
                 }.bind(this)
             });
-
-            function convertToCelsius(temperature) {
-                return Math.round((temperature - 32) * 5/9);
-            }
-
         }.bind(this));
     },
     render: function () {
