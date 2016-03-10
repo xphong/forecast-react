@@ -1,5 +1,8 @@
+'use strict';
+
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var EventEmitter = require('events').EventEmitter;
+var assign = require('react/lib/Object.assign');
 
 var CHANGE_EVENT = 'change';
 
@@ -11,13 +14,13 @@ function _searchWeather(city) {
 
 var AppStore = assign(EventEmitter.prototype, {
   emitChange: function() {
-    this.emit(CHANGE_EVENT)
+    this.emit(CHANGE_EVENT);
   },
   addChangeListener: function(callback) {
-    this.on(CHANGE_EVENT, callback)
+    this.on(CHANGE_EVENT, callback);
   },
   removeChangeListener: function(callback) {
-    this.removeListener(CHANGE_EVENT, callback)
+    this.removeListener(CHANGE_EVENT, callback);
   },
   getWeatherForecast: function() {
     return _WeatherForecast;

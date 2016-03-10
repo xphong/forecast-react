@@ -3,6 +3,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
+var AppStore = require('../stores/WeatherStore');
 
 function convertToCelsius(temperature) {
     return Math.round((temperature - 32) * 5/9);
