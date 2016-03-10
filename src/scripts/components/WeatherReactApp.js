@@ -17,6 +17,5 @@ var WeatherReactApp = React.createClass({
     );
   }
 });
-ReactDOM.render(<WeatherReactApp />, document.getElementById('content')); // jshint ignore:line
 
 module.exports = WeatherReactApp;
