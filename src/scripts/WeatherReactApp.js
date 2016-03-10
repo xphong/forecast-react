@@ -1,7 +1,7 @@
 'use strict';
 
-var React = require('react/addons');
-var ReactTransitionGroup = React.addons.TransitionGroup;
+var React = require('react');
+var ReactDOM = require('react-dom');
 var Weather = require('./components/Weather');
 
 // CSS
@@ -12,13 +12,11 @@ var WeatherReactApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
-          <ReactTransitionGroup transitionName="fade">
-              <Weather />
-          </ReactTransitionGroup>
+        <Weather />
       </div>
     );
   }
 });
-React.render(<WeatherReactApp />, document.getElementById('content')); // jshint ignore:line
+ReactDOM.render(<WeatherReactApp />, document.getElementById('content')); // jshint ignore:line
 
 module.exports = WeatherReactApp;
