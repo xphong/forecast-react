@@ -9,7 +9,8 @@ var WeatherSearch = React.createClass({
       city: ''
     };
   },
-  handleSubmit: function () {
+  handleSubmit: function (event) {
+    event.preventDefault();
     AppActions.searchWeather(this.state.city);
   },
   handleChange: function (event) {

@@ -7,10 +7,20 @@ var assign = require('react/lib/Object.assign');
 
 var CHANGE_EVENT = 'change';
 
-var _WeatherForecast = {};
+var _WeatherForecast = {
+  summary: 0,
+  temperature: 0,
+  humidity: 0,
+  pressure: 0
+};
 
-function _searchWeather(city) {
-
+function _retrieveWeather(weather) {
+  _WeatherForecast = {
+    summary: weather.weather[0].main,
+    temperature: weather.main.temp,
+    humidity: weather.main.humidity,
+    pressure: weather.main.pressure
+  };
 }
 
 var AppStore = assign(EventEmitter.prototype, {
@@ -33,7 +43,7 @@ AppDispatcher.register(function(payload) {
 
   switch(action.actionType) {
     case AppConstants.SEARCH_WEATHER:
-      _searchWeather(payload.action.city);
+      _retrieveWeather(payload.action.weather);
       break;
   }
 
