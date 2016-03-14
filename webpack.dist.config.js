@@ -18,7 +18,7 @@ module.exports = {
 
   debug: false,
   devtool: false,
-  entry: './src/scripts/WeatherReactApp.js',
+  entry: './src/scripts/app.js',
 
   stats: {
     colors: true,
